@@ -33,16 +33,16 @@ jobs:
       - name: Build Astro site
         run: npm run build
 
+      - name: Preemptively upload useless artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: preemptive
+          path: README.md  # or any existing file, just to trigger the v3 load
+
       - name: Upload build output
         uses: actions/upload-pages-artifact@v2
         with:
           path: ./dist
-
-      - name: Pointless artifact upload for no reason
-        uses: actions/upload-artifact@v3
-        with:
-          name: useless-artifact
-          path: README.md  # Or any file that exists just to satisfy the action
 
   deploy:
     needs: build
