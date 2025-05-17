@@ -1,0 +1,87 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="About | MinBlog" description="Learn more about MinBlog and its author">
+  <div class="container about-container">
+    <header class="page-header">
+      <h1>About</h1>
+    </header>
+    
+    <div class="about-content">
+      <p>
+        Welcome to MinBlog, a minimalist blog focused on delivering quality content without distractions.
+        This blog was created with a design philosophy that prioritizes readability, accessibility, and user experience.
+      </p>
+      
+      <h2>The Author</h2>
+      <p>
+        [Your introduction here] Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. 
+        Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.
+      </p>
+      
+      <h2>The Blog</h2>
+      <p>
+        MinBlog is built with Astro, a modern static site generator that allows for incredible performance while maintaining 
+        developer experience. The site features:
+      </p>
+      
+      <ul>
+        <li>Responsive design that works well on all devices</li>
+        <li>Dark and light theme support</li>
+        <li>Markdown-based content for easy writing</li>
+        <li>Fast loading times</li>
+        <li>SEO optimization</li>
+      </ul>
+      
+      <h2>Contact</h2>
+      <p>
+        Have questions or want to reach out? You can contact me through:
+      </p>
+      
+      <ul>
+        <li>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></li>
+        <li>GitHub: <a href="https://github.com/dmuolhoi" target="_blank" rel="noopener noreferrer">@dmuolhoi</a></li>
+      </ul>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .about-container {
+    max-width: 800px;
+  }
+  
+  .page-header {
+    padding: 4rem 0 2rem;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .about-content {
+    line-height: 1.6;
+  }
+  
+  h2 {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  ul {
+    margin-bottom: 2rem;
+  }
+  
+  @media (max-width: 768px) {
+    .page-header {
+      padding: 3rem 0 1.5rem;
+    }
+    
+    h1 {
+      font-size: 2rem;
+    }
+  }
+</style>
