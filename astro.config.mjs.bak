@@ -4,7 +4,6 @@ import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   site: 'https://dmuolhoi.github.io',
-  base: '/dmuolhoi.github.io/', // << THIS LINE is essential
   integrations: [
     mdx(),
     sitemap({
@@ -17,10 +16,10 @@ export default defineConfig({
     rehypePlugins: [],
     shikiConfig: {
       theme: 'github-light',
-      wrap: true,
+      wrap: true
     }
   },
   build: {
-    format: 'file',
+    format: 'file'
   }
 });
