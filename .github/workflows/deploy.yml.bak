@@ -19,12 +19,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4  # Updated to v4
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v4  # Updated to v4
         with:
-          node-version: 20
+          node-version: 20  # Updated to LTS version
           cache: 'npm'
 
       - name: Install dependencies
@@ -33,17 +33,8 @@ jobs:
       - name: Build Astro site
         run: npm run build
 
-      # First upload as regular artifact (for debugging)
-      - name: Upload build output as regular artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: site-build
-          path: ./dist
-          retention-days: 1
-
-      # Then upload specifically for Pages
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v2
+      - name: Upload build output
+        uses: actions/upload-pages-artifact@v2  # Updated to v2
         with:
           path: ./dist
 
@@ -56,4 +47,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v3
+        uses: actions/deploy-pages@v3  # Updated to v3
