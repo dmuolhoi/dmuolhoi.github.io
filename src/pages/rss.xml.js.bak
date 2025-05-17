@@ -8,7 +8,7 @@ export async function GET(context) {
   }
 
   // Glob posts in /blog folder
-  const posts = await context.glob('./Blog/*.{md,mdx}');
+  const posts = await context.glob('./blog/*.{md,mdx}');
 
   // Filter out drafts
   const nonDraftPosts = posts.filter(post => !post.frontmatter.draft);
