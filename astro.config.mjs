@@ -4,7 +4,7 @@ import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   site: 'https://dmuolhoi.github.io',
-  base: '/dmuolhoi.github.io/', // << THIS LINE is essential
+  base: '/', // << THIS LINE is essential
   integrations: [
     mdx(),
     sitemap({
