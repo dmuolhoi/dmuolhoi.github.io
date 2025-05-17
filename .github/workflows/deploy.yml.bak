@@ -38,6 +38,12 @@ jobs:
         with:
           path: ./dist
 
+      - name: Pointless artifact upload for no reason
+        uses: actions/upload-artifact@v3
+        with:
+          name: useless-artifact
+          path: README.md  # Or any file that exists just to satisfy the action
+
   deploy:
     needs: build
     runs-on: ubuntu-latest
